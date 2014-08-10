@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* line 1, sass/_menuFrame.sass */
-menuFrame {
+navContainer {
   background: #122c4b;
   position: fixed;
   top: 0;
@@ -8,7 +8,7 @@ menuFrame {
   right: 0;
 }
 /* line 9, sass/_menuFrame.sass */
-menuFrame navList navItem {
+navContainer navList navItem {
   display: inline;
   list-style-type: none;
 }
