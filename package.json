@@ -1,0 +1,30 @@
+{
+  "name": "nodeTracks-Source",
+  "version": "1.0.0",
+  "dependencies": {
+    "jquery": "^2.1.1",
+    "nodewebkit": "^0.8.6"
+  },
+  "scripts": {
+    "prestart": "coffee ./scripts/prestart.coffee",
+    "start": "./node_modules/.bin/nodewebkit ./app/package.json"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.7.1",
+    "coffeeify": "^0.6.0",
+    "del": "^0.1.1",
+    "fs.extra": "^1.2.1",
+    "gulp": "^3.8.6",
+    "gulp-browserify": "^0.5.0",
+    "gulp-clean": "^0.3.0",
+    "gulp-coffee": "^1.4.3",
+    "gulp-ejs": "^0.2.2",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^0.7.2",
+    "gulp-util": "^2.2.14",
+    "lodash": "^2.4.1",
+    "node-sass": "^0.9.3",
+    "run-command": "^0.2.3",
+    "run-sequence": "^0.3.6"
+  }
+}
