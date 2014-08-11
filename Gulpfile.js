@@ -13,10 +13,10 @@ var gulp        = require('gulp'),
     runSequence = require('run-sequence');
 
 var baseAppPath = path.join(__dirname,  'src'),
-    baseStaticPath = path.join(__dirname, 'app', 'generated'),
+    baseStaticPath = path.join(__dirname, 'app'),
     baseImgPath = path.join(baseAppPath, 'img'),
     baseJsPath  = path.join(baseAppPath, 'js'),
-    baseCssPath = path.join(baseAppPath, 'css');
+    baseCssPath = path.join(baseAppPath, 'scss');
 
 var paths = {
   cleanPath      : path.join(baseStaticPath, '**', '*'),
@@ -37,8 +37,8 @@ var paths = {
 
 var watchPaths = {
   css: [
-    path.join(baseCssPath, '**', '*.styl*'),
-    baseCssPath, path.join('**', '*', '*.styl*')
+    path.join(baseCssPath, '**', '*.scss*'),
+    baseCssPath, path.join('**', '*', '*.scss*')
   ],
   coffee: [path.join(baseJsPath, '**', '*.coffee')],
   assets: paths.assetsPaths,
@@ -140,7 +140,7 @@ gulp.task('watch-pre-tasks', function(callback) {
 //
 // Watch
 //
-gulp.task('watch', ['clean','sass','coffee','assets','ejs'], function() {
+gulp.task('watch', ['watch-pre-tasks'], function() {
   gulp.watch(watchPaths.css, ['sass'])
     .on('error', gutil.log)
     .on('error', gutil.beep);
