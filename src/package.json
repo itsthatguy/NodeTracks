@@ -9,11 +9,5 @@
     "title": "NodeTracks",
     "icon": "./tracks.jpeg",
     "label": "./tracks.jpeg"
-    },
-    "dependencies": {
-      "nodewebkit": "^0.8.6"
-    },
-    "scripts": {
-      "start": "./node_modules/.bin/nodewebkit ."
     }
   }

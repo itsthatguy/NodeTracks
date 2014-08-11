@@ -1,13 +1,14 @@
 .menu-frame {
   background: #122c4b;
+  color: #fff;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
 
-  .nav-list {
-    .nav-item {
-      display: inline;
+  .menu-items {
+    .menu-item {
+      display: inline-block;
       list-style-type: none;
     }
   }
