@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "dependencies": {
     "jquery": "^2.1.1",
-    "nodewebkit": "^0.8.6"
+    "nodewebkit": "~0.8.6-3"
   },
   "scripts": {
-    "prestart": "coffee ./scripts/prestart.coffee",
-    "start": "./node_modules/.bin/nodewebkit ./app/package.json"
+    "prestart": "node ./scripts/prestart.js",
+    "start": "coffee ./scripts/start.coffee"
   },
+  "main": "src/index.html",
   "devDependencies": {
     "coffee-script": "^1.7.1",
     "coffeeify": "^0.6.0",
@@ -21,8 +22,7 @@
     "gulp-ejs": "^0.2.2",
     "gulp-rename": "^1.2.0",
     "gulp-sass": "^0.7.2",
-    "gulp-util": "^2.2.14",
-    "lodash": "^2.4.1",
+    "gulp-util": "^3.0.0",
     "node-sass": "^0.9.3",
     "run-command": "^0.2.3",
     "run-sequence": "^0.3.6"
